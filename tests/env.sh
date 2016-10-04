@@ -18,4 +18,5 @@ export PYTHONPATH PATH LD_LIBRARY_PATH PATH
 PGHOST=localhost
 export PGHOST
 
-
+# to make tests independent from user environment
+PSQLRC=/dev/null

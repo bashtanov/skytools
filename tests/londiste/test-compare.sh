@@ -60,7 +60,7 @@ run londiste3 $v conf/londiste_db1.ini create-root node1 'dbname=db1'
 run londiste3 $v conf/londiste_db2.ini create-branch node2 'dbname=db2' --provider='dbname=db1'
 run londiste3 $v conf/londiste_db3.ini create-branch node3 'dbname=db3' --provider='dbname=db2'
 run londiste3 $v conf/londiste_db4.ini create-branch node4 'dbname=db4' --provider='dbname=db3'
-run londiste3 $v conf/londiste_db5.ini create-branch node5 'dbname=db5' --provider='dbname=db4'
+run londiste3 $v conf/londiste_db5.ini create-leaf node5 'dbname=db5' --provider='dbname=db4'
 
 msg "Run ticker"
 run pgqd $v -d conf/pgqd.ini
