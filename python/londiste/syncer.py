@@ -325,7 +325,7 @@ class Syncer(skytools.DBScript):
             q = "select * from pgq_node.get_node_info(%s)"
             res = self.exec_cmd(dst_db, q, [self.queue_name])
             last_tick = res[0]['worker_last_tick']
-            if last_tick > tick_id:
+            if last_tick >= tick_id:
                 break
 
             # limit lock time
